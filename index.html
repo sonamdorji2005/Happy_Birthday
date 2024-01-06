@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #gift {
+      margin-top: 20px;
+      display: none; /* Initially hide the gift */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Happy Birthday!🎉</h1>
+    <p>Okay before you open it, just press the button below</p>
+    <button onclick="playBirthdaySong()">Ahem...🤭</button>
+    <p>Now let's open it!</p>
+    <button onclick="revealGift()">Open it 🎁</button>
+    <div id="gift">
+      <p>On this special day, I want to take a moment to send you heartfelt birthday wishes that extend far beyond the limits of words. Happy Birthday! 🎉 Today is a celebration of you—the wonderful, extraordinary person who brings joy and warmth into the lives of everyone lucky enough to know you.</p>
+      <p>As you embark on another journey around the sun, I wish for your days to be filled with laughter, your heart with love, and your path with incredible moments. May this year be a chapter of beautiful experiences, personal growth, and endless possibilities. You deserve nothing less than the abundance of happiness that life has to offer.</p>
+      <p>Your presence in this world is a gift to us all. Your kindness, strength, and the way you light up any room you enter make you truly remarkable. May this birthday be a reflection of the incredible person you are—a day filled with love, surrounded by those who cherish you.</p>
+      <p>May your dreams take flight and your aspirations come to fruition. May the challenges you encounter only serve to strengthen you, and may every obstacle be a stepping stone toward greater success and fulfillment.</p>
+      <p>In the coming year, may you find moments of serenity in the midst of life's hustle, discover new passions that ignite your spirit, and create memories that will forever warm your heart.</p>
+      <p>Here's to you, 💫𝚈𝚞𝚍𝚎𝚗💙, a phenomenal soul deserving of all the love and happiness the universe has to offer. May your birthday be as extraordinary as you are.</p>
+      <p>With lots of love,</p>
+      <p>......somjigs!👾💙</p>
+      <!-- Add more birthday wishes or customize as you like -->
+  </div>
+    <!-- Add the audio element for the birthday song -->
+    <audio id="birthdaySong" src="happybirthday.mp3"></audio>
+  </div>
+  <script>
+    function revealGift() {
+      var giftDiv = document.getElementById("gift");
+
+      if (giftDiv.style.display === "none" || giftDiv.style.display === "") {
+        giftDiv.style.display = "block";
+      } else {
+        giftDiv.style.display = "none";
+      }
+    }
+
+    function playBirthdaySong() {
+      var birthdaySong = document.getElementById("birthdaySong");
+      birthdaySong.play();
+    }
+  </script>
+</body>
+</html>
